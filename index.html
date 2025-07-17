@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML tutorial</title>
+</head>
+
+<body>
+    <!-- Headings -->
+    <h1>Main Heading (Most Important)</h1>
+    <h2>Sub-heading</h2>
+    <h3>Section Heading</h3>
+    <h4>Sub-section</h4>
+    <h5>Minor section</h5>
+    <h6>Smallest Heading</h6>
+
+    <!-- Paragraphs and Line Breaks -->
+    <p>This is a paragraph. It is block-level.</p>
+    <p>This is another paragraph.</p>
+    <p>This is the first line.<br>This is the second line.</p>
+
+    <!-- Text Formatting Tags -->
+    <p>This is <strong>important</strong> and <em>emphasized</em>.</p>
+    <p>E = mc<sup>2</sup></p>
+    <p>H<sub>2</sub>O is water.</p>
+
+    <!-- links <a> tag -->
+    <a href="https://google.com">Visit Google</a>
+    <a href="mailto:you@example.com">Send Email</a>
+    <a href="#section2">Jump to Section 2</a>
+
+    <!-- images <img> tag -->
+    <img src="image.jpg" alt="A sample image" width="300" height="200">
+
+    <!-- Lists in HTML -->
+    <!-- ✅ Unordered List (<ul>) -->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <!-- ✅ Ordered List (<ol>) -->
+    <ol>
+        <li>Wake up</li>
+        <li>Code</li>
+        <li>Repeat</li>
+    </ol>
+    <!-- 🔁 Nested List -->
+    <ul>
+        <li>Frontend
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- Grouping Tags: div and span -->
+    <div>
+        <h2>Section Title</h2>
+        <p>Grouped content</p>
+    </div>
+    <p>This is <span style="color: red;">red text</span> in a sentence.</p>
+    <!-- HTML Forms – Collecting User Data -->
+    <!-- Basic Form Structure -->
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username">
+        <button type="submit">Submit</button>
+    </form>
+    <!-- ✅ Full Example: Complete HTML Form with All Input Types -->
+    <h1>User Information Form</h1>
+
+    <form action="/submit" method="POST">
+        <!-- Group 1: Basic Information -->
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="100"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Group 2: Preferences -->
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <p>Gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br><br>
+
+            <label for="hobbies">Select your hobbies:</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Reading</label>
+
+            <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+            <label for="traveling">Traveling</label>
+
+            <input type="checkbox" id="coding" name="hobbies" value="coding">
+            <label for="coding">Coding</label>
+            <br><br>
+
+            <label for="color">Choose your favorite color:</label>
+            <input type="color" id="color" name="favoriteColor"><br><br>
+
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate"><br><br>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume"><br><br>
+
+            <label for="satisfaction">Satisfaction (1 to 10):</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"><br><br>
+
+            <label for="website">Your Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Group 3: Location and Message -->
+        <fieldset>
+            <legend>Location & Message</legend>
+
+            <label for="city">Select Your City:</label>
+            <select id="city" name="city">
+                <option value="">--Choose--</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="bangalore">Bangalore</option>
+            </select><br><br>
+
+            <label for="message">Write something about yourself:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Your message..."></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Submit & Reset -->
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset Form">
+    </form>
+
+</body>
+
+</html>

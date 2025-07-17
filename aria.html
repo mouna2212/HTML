@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Webpage Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        nav a {
+            margin-right: 10px;
+        }
+
+        [hidden] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Semantic header with nav -->
+    <header>
+        <h1>My Accessible Page</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Semantic section with a form -->
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required /><br /><br />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required /><br /><br />
+
+                <label for="message">Message:</label><br />
+                <textarea id="message" name="message" rows="4" cols="30"></textarea><br /><br />
+
+                <button type="submit" aria-label="Submit contact form">Submit</button>
+            </form>
+        </section>
+
+        <hr />
+
+        <!-- Table with accessible structure -->
+        <section>
+            <h2>Team Members</h2>
+            <table border="1">
+                <caption>Company Directory</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alice</td>
+                        <td>Engineer</td>
+                        <td>Development</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>Designer</td>
+                        <td>UX/UI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr />
+
+        <!-- Alert section with ARIA role -->
+        <div role="alert" tabindex="0">
+            ⚠️ Important: This site uses cookies to improve experience.
+        </div>
+
+        <br />
+
+        <!-- FAQ using ARIA-expanded for accessibility -->
+        <section id="faq">
+            <h2>FAQ</h2>
+            <button aria-expanded="false" aria-controls="faq1" onclick="toggleFaq(this, 'faq1')">
+                What is ARIA?
+            </button>
+            <div id="faq1" hidden>
+                ARIA (Accessible Rich Internet Applications) adds extra accessibility to non-semantic or custom UI
+                elements.
+            </div>
+
+            <br />
+
+            <button aria-expanded="false" aria-controls="faq2" onclick="toggleFaq(this, 'faq2')">
+                How does tabindex work?
+            </button>
+            <div id="faq2" hidden>
+                It controls keyboard focus order for custom elements.
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with semantic tag -->
+    <footer>
+        <p>Copyright © 2025</p>
+    </footer>
+
+    <!-- Script to toggle FAQ -->
+    <script>
+        function toggleFaq(button, contentId) {
+            const content = document.getElementById(contentId);
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !expanded);
+            content.hidden = expanded;
+        }
+    </script>
+</body>
+
+</html>

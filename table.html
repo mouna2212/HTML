@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables Deep Dive</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #f4f4f4;
+        }
+
+        tfoot {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Tables Deep Dive</h1>
+
+    <!-- 1. Basic Table -->
+    <h2>1. Basic Table</h2>
+    <table>
+        <tr>
+            <th>Product</th> <!-- Table Header -->
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Apple</td> <!-- Table Data -->
+            <td>$1</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>$0.50</td>
+        </tr>
+    </table>
+
+    <!-- 2. Table with thead, tbody, tfoot -->
+    <h2>2. Table with thead, tbody, tfoot</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Math</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>175</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- 3. Using colspan to merge columns -->
+    <h2>3. Table Using Colspan</h2>
+    <table>
+        <tr>
+            <th colspan="2">User Info</th> <!-- Merged two columns -->
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>John Doe</td>
+        </tr>
+    </table>
+
+    <!-- 4. Using rowspan to merge rows -->
+    <h2>4. Table Using Rowspan</h2>
+    <table>
+        <tr>
+            <th rowspan="2">Course</th> <!-- Span across 2 rows -->
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+        </tr>
+    </table>
+
+    <!-- 5. Advanced Table: Combining rowspan and colspan -->
+    <h2>5. Advanced Table: Student Marks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Name</th>
+                <th colspan="3">Subjects</th> <!-- Merging 3 columns -->
+            </tr>
+            <tr>
+                <th>Math</th>
+                <th>Science</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>85</td>
+                <td>90</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>78</td>
+                <td>83</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>163</td>
+                <td>173</td>
+                <td>168</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- 6. Timetable Layout Example -->
+    <h2>6. Timetable Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>9:00 - 10:00</th>
+                <th>10:00 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 1:00</th>
+                <th>1:00 - 2:00</th>
+                <th>2:00 - 3:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>English</td>
+                <td rowspan="5">Lunch</td> <!-- rowspan for lunch break across 5 days -->
+                <td>History</td>
+                <td>PE</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Geography</td>
+                <td>Math</td>
+                <td>Biology</td>
+                <td>Art</td>
+                <td>Library</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Chemistry</td>
+                <td>Physics</td>
+                <td>Computer</td>
+                <td>English</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Math</td>
+                <td>Biology</td>
+                <td>Science</td>
+                <td>Lab</td>
+                <td>Games</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>History</td>
+                <td>Geography</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>PT</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

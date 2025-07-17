@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms & Multimedia Example</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Forms & Multimedia Demo</h1>
+        <p>This page demonstrates a complete form along with audio, video, image, and embedded content.</p>
+    </header>
+
+    <!-- 🔶 HTML FORM START -->
+    <section aria-labelledby="contact-form-section">
+        <h2 id="contact-form-section">📋 Registration Form</h2>
+        <form action="/submit" method="POST">
+            <!-- Text Input -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required /><br /><br />
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required /><br /><br />
+
+            <!-- Number Input -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" /><br /><br />
+
+            <!-- Date Input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" /><br /><br />
+
+            <!-- Radio Buttons -->
+            <p>Gender:</p>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br /><br />
+
+            <!-- Checkbox -->
+            <p>Hobbies:</p>
+            <input type="checkbox" id="music" name="hobbies" value="Music" />
+            <label for="music">Music</label>
+            <input type="checkbox" id="sports" name="hobbies" value="Sports" />
+            <label for="sports">Sports</label><br /><br />
+
+            <!-- Dropdown -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">--Select--</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select><br /><br />
+
+            <!-- Textarea -->
+            <label for="bio">Short Bio:</label><br />
+            <textarea id="bio" name="bio" rows="4" cols="40"></textarea><br /><br />
+
+            <!-- Submit Button -->
+            <input type="submit" value="Register" />
+        </form>
+    </section>
+    <!-- 🔶 HTML FORM END -->
+
+    <hr />
+
+    <!-- 🎵 AUDIO SECTION -->
+    <section aria-labelledby="audio-section">
+        <h2 id="audio-section">🎵 Sample Audio</h2>
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <hr />
+
+    <!-- 🎥 VIDEO SECTION -->
+    <section aria-labelledby="video-section">
+        <h2 id="video-section">🎥 Sample Video with Captions</h2>
+        <video controls width="480" poster="preview.jpg">
+            <source src="sample-video.mp4" type="video/mp4" />
+            <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" />
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <hr />
+
+    <!-- 🖼️ IMAGE SECTION -->
+    <section aria-labelledby="image-section">
+        <h2 id="image-section">🖼️ Image Display</h2>
+        <img src="nature.jpg" alt="Green hills and blue sky" width="500" />
+    </section>
+
+    <hr />
+
+    <!-- 🌐 EMBEDDED CONTENT SECTION -->
+    <section aria-labelledby="embed-section">
+        <h2 id="embed-section">🌐 Embedded YouTube Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample YouTube Video"
+            frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HTML Tutorial Project. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
