@@ -1,224 +1,141 @@
-# HTML Deep Dive – Day 1: HTML Basics & Structure
 
-Welcome to Day 1 of the HTML Deep Dive series! In this session, you'll learn the foundational building blocks of HTML including structure, formatting, lists, links, and media embedding.
+# 🌐 HTML Deep Dive
 
----
-
-## 📚 Topics Covered
-
-### ✅ 1. What is HTML?
-
-- HyperText Markup Language
-- Standard language for creating web pages
-
-### ✅ 2. Basic Document Structure
-
-- `<!DOCTYPE html>` declaration
-- `<html>`, `<head>`, and `<body>` tags
-- Metadata with `<meta>` and `<title>`
-
-### ✅ 3. HTML Elements, Tags, and Attributes
-
-- Syntax and nesting
-- Self-closing tags
-- Global attributes (id, class, title, etc.)
-
-### ✅ 4. Headings and Paragraphs
-
-- `<h1>` to `<h6>` for headings
-- `<p>` for paragraphs
-- `<br>` for line breaks
-
-### ✅ 5. Text Formatting
-
-- `<strong>`, `<em>`, `<mark>`, `<sub>`, `<sup>`, `<del>`, `<ins>`, `<small>`, etc.
-
-### ✅ 6. Links and Anchors
-
-- `<a href="...">` for hyperlinks
-- `target="_blank"` for new tab
-- Email and phone links
-
-### ✅ 7. Images
-
-- `<img src="..." alt="...">`
-- Best practices for accessibility
-- Width/height attributes
-
-### ✅ 8. Lists
-
-- Ordered (`<ol>`) and unordered (`<ul>`)
-- Nesting `<li>` elements
-
-### ✅ 9. Comments
-
-- `<!-- This is a comment -->`
-
-### ✅ 10. Div and Span
-
-- `<div>` for block-level containers
-- `<span>` for inline text styling
+Welcome to the **HTML Deep Dive** repository! This guide covers everything from the foundational elements of HTML to advanced semantics, accessibility, and best practices for modern web development.
 
 ---
 
-## 🧪 Practice Challenges
+## 📚 Table of Contents
 
-### 📌 Challenge 1: Portfolio Page
-
-Create a static HTML portfolio with:
-
-- Your name in a heading
-- A short bio paragraph
-- A profile image
-- List of skills or hobbies
-- A link to your social media or GitHub
-
-### 📌 Challenge 2: Recipe Page
-
-- Recipe title (heading)
-- Description paragraph
-- Unordered list of ingredients
-- Ordered list of cooking steps
-- Image of the final dish
+1. [Introduction to HTML](#introduction-to-html)
+2. [HTML Document Structure](#html-document-structure)
+3. [Text Formatting Elements](#text-formatting-elements)
+4. [HTML Links, Images, and Media](#html-links-images-and-media)
+5. [Forms and Input Elements](#forms-and-input-elements)
+6. [Tables and Lists](#tables-and-lists)
+7. [HTML5 Semantic Tags](#html5-semantic-tags)
+8. [Accessibility in HTML (ARIA)](#accessibility-in-html-aria)
+9. [SEO Best Practices](#seo-best-practices)
+10. [Project Ideas](#project-ideas)
+11. [Resources](#resources)
 
 ---
 
-## ✅ What's Next?
+## 🔰 Introduction to HTML
 
-# 📅 Day 2: Semantic HTML, Forms, Tables & Accessibility
-
-This day focuses on structuring web content meaningfully using semantic HTML, creating complex forms, designing accessible tables, and implementing web accessibility best practices using ARIA.
+HTML (HyperText Markup Language) is the standard language for creating web pages. It structures content using elements defined by tags like `<p>`, `<div>`, `<img>`, etc.
 
 ---
 
-## ✅ 1. Semantic HTML
-
-Semantic elements clearly describe their meaning to both the browser and the developer.
-
-### 🧱 Common Semantic Tags:
-
-| Tag            | Purpose                                    |
-| -------------- | ------------------------------------------ |
-| `<header>`     | Represents the header of a section or page |
-| `<nav>`        | Defines navigation links                   |
-| `<main>`       | Main content area                          |
-| `<section>`    | Thematic grouping of content               |
-| `<article>`    | Independent, self-contained content        |
-| `<aside>`      | Secondary content like sidebars            |
-| `<footer>`     | Footer of a section or page                |
-| `<figure>`     | Groups media and its caption               |
-| `<figcaption>` | Caption for `<figure>` content             |
-
-### ✅ Example:
-
-````html
-<main>
-  <article>
-    <header><h1>Blog Title</h1></header>
-    <p>Blog content here...</p>
-    <footer>Author: Mouna</footer>
-  </article>
-</main>
-
-# 📅 Day 3: HTML Forms & Multimedia
-
-Today’s focus is on two major areas in HTML:
-- Creating **user-friendly and accessible forms**
-- Embedding and customizing **multimedia** (audio, video, images)
-
----
-
-## ✅ 1. HTML Forms (Review + Advanced Concepts)
-
-HTML forms are essential for collecting user input. We’ll cover structured layout, validation, and accessibility enhancements.
-
-### 🧾 Key Elements:
-- `<form>`, `<input>`, `<textarea>`, `<select>`, `<button>`
-- Grouping: `<fieldset>` and `<legend>`
-- Accessibility: `label`, `aria-*`, `tabindex`
-
-### ✅ Example:
-```html
-<form>
-  <fieldset>
-    <legend>Contact Info</legend>
-
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required />
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" />
-
-    <label for="interest">Area of Interest:</label>
-    <select id="interest" name="interest">
-      <option value="html">HTML</option>
-      <option value="css">CSS</option>
-      <option value="js">JavaScript</option>
-    </select>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"></textarea>
-
-    <button type="submit">Submit</button>
-  </fieldset>
-</form>
-````
-
-# 📅 Day 4: HTML Layout Techniques + Meta Tags + SEO
-
-Today’s focus is on **structuring entire pages**, **using meta tags**, and **optimizing your site for search engines** (SEO).
-
----
-
-## ✅ 1. HTML Layout Techniques
-
-Proper layout improves readability, maintainability, and responsiveness.
-
-### 🧱 Semantic Layout Tags:
-
-| Tag         | Use Case                         |
-| ----------- | -------------------------------- |
-| `<header>`  | Site or section header           |
-| `<nav>`     | Primary navigation               |
-| `<main>`    | Main content section             |
-| `<section>` | Related content block            |
-| `<article>` | Independent content (blog, news) |
-| `<aside>`   | Side content (ads, links, info)  |
-| `<footer>`  | Site or section footer           |
-
-### ✅ Example Page Layout:
+## 🧱 HTML Document Structure
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Deep Dive</title>
+</head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="projects">
-      <h2>Projects</h2>
-      <article>
-        <h3>Weather App</h3>
-        <p>Built with HTML, CSS, JS & OpenWeather API.</p>
-      </article>
-    </section>
-
-    <aside>
-      <h4>Skills</h4>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-      </ul>
-    </aside>
-  </main>
-
-  <footer>
-    <p>© 2025 Mouna MC</p>
-  </footer>
+  <h1>Welcome</h1>
 </body>
+</html>
 ```
+
+- `<!DOCTYPE html>`: Declares HTML5.
+- `<html>`: Root element.
+- `<head>`: Metadata and links.
+- `<body>`: Page content.
+
+---
+
+## 📝 Text Formatting Elements
+
+- `<h1>` to `<h6>`: Headings
+- `<p>`: Paragraph
+- `<strong>`, `<em>`, `<mark>`: Emphasis
+- `<br>`, `<hr>`: Line break and horizontal rule
+
+---
+
+## 🔗 HTML Links, Images, and Media
+
+- `<a href="...">`: Anchor tag for links
+- `<img src="..." alt="...">`: Images
+- `<audio>` and `<video>`: Multimedia
+
+---
+
+## 🧾 Forms and Input Elements
+
+- `<form>`, `<input>`, `<label>`, `<select>`, `<textarea>`, `<button>`
+- Input types: text, email, password, checkbox, radio, etc.
+- Attributes: `required`, `placeholder`, `readonly`, `disabled`
+
+---
+
+## 🧮 Tables and Lists
+
+### Tables
+```html
+<table>
+  <tr><th>Name</th><th>Age</th></tr>
+  <tr><td>Alice</td><td>25</td></tr>
+</table>
+```
+
+### Lists
+- Ordered List: `<ol><li></li></ol>`
+- Unordered List: `<ul><li></li></ul>`
+- Description List: `<dl><dt></dt><dd></dd></dl>`
+
+---
+
+## 🧠 HTML5 Semantic Tags
+
+Semantic tags help describe the meaning of content:
+
+- `<header>`, `<footer>`, `<nav>`
+- `<article>`, `<section>`, `<main>`, `<aside>`
+- `<figure>`, `<figcaption>`
+
+---
+
+## ♿ Accessibility in HTML (ARIA)
+
+- Use `alt` attributes on images
+- Use landmarks (`<nav>`, `<main>`, `<header>`)
+- Apply ARIA roles (`role="button"`, `aria-label`)
+
+---
+
+## 🔍 SEO Best Practices
+
+- Use proper heading hierarchy
+- Add `meta` tags (`description`, `viewport`)
+- Use `alt` for images
+- Semantic tags improve crawling
+
+---
+
+## 💡 Project Ideas
+
+- Personal Portfolio
+- Product Landing Page
+- Survey Form
+- Blog Page with Semantic HTML
+- Resume Template
+
+---
+
+## 🔗 Resources
+
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [W3Schools HTML Guide](https://www.w3schools.com/html/)
+- [FreeCodeCamp HTML Course](https://www.freecodecamp.org/learn)
+
+---
+
+## 📄 License
+
+MIT License © 2025 [YourName]
